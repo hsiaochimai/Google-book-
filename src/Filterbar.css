@@ -1,0 +1,8 @@
+.filterBar{
+    display:flex;
+    justify-content: center;
+    background:lightgrey;
+}
+.PrintType{
+  margin-right: 20px;  
+}

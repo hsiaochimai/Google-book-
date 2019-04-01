@@ -1,25 +1,59 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header'
+import Searchbar from './Searchbar'
+import Filterbar from './Filterbar'
+import Results from './Results'
 
+/*const bookInfo={'items':[
+  {
+    'volumeInfo':{
+      "title": "Denyse Schmidt Quilts",
+                "subtitle": "30 Colorful Quilt and Patchwork Projects",
+                "authors": [
+                    "Denyse Schmidt",
+                    "Bethany Lyttle"
+                ]
+
+    },
+    'saleInfo' :{
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+          "amount": 19.57,
+          "currencyCode": "USD"
+      }
+    }
+  },
+  {
+    'volumeInfo':{
+      "title": "Denyse Schmidt Quilts",
+                "subtitle": "30 Colorful Quilt and Patchwork Projects",
+                "authors": [
+                    "Denyse Schmidt",
+                    "Bethany Lyttle"
+                ]
+
+    },
+    'saleInfo' :{
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+          "amount": 19.57,
+          "currencyCode": "USD"
+      }
+    }
+  }
+]
+
+}*/
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Searchbar />
       </div>
     );
   }
