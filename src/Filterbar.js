@@ -8,8 +8,8 @@ class Filterbar extends Component{
 render(){
     return(
         <div className='filterBar'>
-            <PrintType />
-            {<BookType />}
+            <PrintType printType={this.props.bookInfo.items}/>
+            <BookType bookType={this.props.bookInfo.items}/>
         </div>
     )
 }

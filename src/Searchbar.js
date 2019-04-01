@@ -9,7 +9,8 @@ class Searchbar extends Component{
         this.state={
             searchResults:[],
             keyword:"",
-            gotResults:false
+            gotResults:null,
+            filteredType: null
         }
     }
     getUserInput(keyword){
@@ -45,11 +46,11 @@ class Searchbar extends Component{
         
         const showResults=this.state.gotResults?
         <Results bookInfo={this.state.searchResults}/> 
-        :alert('There were no results')
+        :this.state.gotResults===null?null:alert("There are no results")
         return(
             
 <div className="searchbar">
-<Filterbar />
+<Filterbar bookInfo={this.state.searchResults}/>
 <form onSubmit={e=>this.handleSubmit(e)} >
     <label htmlFor="search">Search:</label>
     <input type="text" name="search" value={this.state.keyword}
